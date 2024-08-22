@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Arquivos de estilo -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/darkMode.css" rel="stylesheet">
+  <link href="./css/clock.css" rel="stylesheet"> <!-- Link para o CSS do relógio -->
+
+  <title>Calendário</title>
+</head>
+<body>
+  
+  <div id="clockContainer" class="position-left margin-20"> <!-- Ajuste a classe para mudar a posição -->
+    <div id="clock"></div>
+  </div>
+
+  <div id="container">
+    <div id="header">
+      <div id="monthDisplay"></div>
+      <div>
+        <button id="backButton">Voltar</button>
+        <button id="nextButton">Próximo</button>
+      </div>
+    </div>
+
+    <div id="weekdays">
+      <div>Domingo</div>
+      <div>Segunda-feira</div>
+      <div>Terça-feira</div>
+      <div>Quarta-feira</div>
+      <div>Quinta-feira</div>
+      <div>Sexta-feira</div>
+      <div>Sábado</div>
+    </div>
+
+    <div id="calendar"></div>
+
+    <div id="newEventModal">
+      <h2>Novo Evento</h2>
+      <input id="eventTitleInput" placeholder="Título do Evento"/>
+      <button id="saveButton">Salvar</button>
+      <button id="cancelButton">Cancelar</button>
+    </div>
+
+    <div id="deleteEventModal">
+      <h2>Evento</h2>
+      <div id="eventText"></div><br>
+      <button id="deleteButton">Apagar</button>
+      <button id="closeButton">Fechar</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+
+    <!-- Scripts -->
+    <script src="scripts/darkMode.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/clock.js" defer></script> <!-- Link para o JS do relógio -->
+  </div>
+</body>
+</html>

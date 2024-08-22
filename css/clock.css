@@ -1,0 +1,46 @@
+/* clock.css */
+
+#clockContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px; /* Largura do relógio */
+    margin: 20px; /* Margem padrão, pode ser ajustada */
+}
+
+#clock {
+    font-size: 24px; /* Tamanho da fonte do relógio */
+    font-family: 'Lato', sans-serif;
+    color: #0078bd; /* Cor do texto do relógio */
+    text-align: center;
+    border: 2px solid #0078bd; /* Borda ao redor do relógio */
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f0f0f0; /* Cor de fundo do relógio */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Sombra ao redor do relógio */
+}
+
+/* Utilitários para ajuste de posição */
+.position-left {
+    position: absolute;
+    left: 0;
+    top: 3px; /* Ajuste a distância do topo conforme necessário */
+}
+
+.position-right {
+    position: absolute;
+    right: 0;
+    top: 20px; /* Ajuste a distância do topo conforme necessário */
+}
+
+.position-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px; /* Ajuste a distância do topo conforme necessário */
+}
+
+/* Adiciona uma margem à direita ao relógio */
+.margin-right-50 {
+    margin-right: 50px; /* Ajuste o valor conforme necessário */
+}

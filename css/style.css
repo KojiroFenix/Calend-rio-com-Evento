@@ -1,0 +1,200 @@
+/* Importação da fonte Lato do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+html {
+  --body-color: #FFFCFF;
+  --header-color: #d36c6c;
+  --header-button: #92a1d1;
+  --color-weekdays: #65bbe0;
+  --box-shadow: #CBD4C2;
+  --hover: #e8faed;
+  --current-day: #7dc6eb;
+  --event-color: #0078bd;
+  --modal-event: #3185ca;
+  --color-day: rgb(8, 30, 104);
+}
+
+body {
+  font-family: 'Lato', sans-serif; /* Aplica a fonte Lato a todo o corpo do texto */
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  background-image: url(../media/siteblz.gif);
+}
+
+button {
+  font-family: 'Lato', sans-serif; /* Aplica a fonte Lato aos botões */
+  width: 75px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px rgb(28, 76, 233);
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  text-align: center; /* Centraliza o texto dentro dos botões */
+}
+
+#header {
+  padding: 10px;
+  color: var(--header-color);
+  font-size: 26px;
+  font-family: 'Lato', sans-serif; /* Aplica a fonte Lato ao cabeçalho */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centraliza verticalmente o conteúdo dentro do cabeçalho */
+  text-align: center; /* Centraliza o texto dentro do cabeçalho */
+}
+
+#header button {
+  background-color: var(--header-button);
+}
+
+#container {
+  width: 770px;
+  border: 2px solid rgba(255, 255, 255, 0.568);
+  border-radius: 5%;
+  opacity: 75%;
+  background-color: rgba(255, 255, 255, 0.568);
+
+  
+}
+
+#weekdays {
+  width: 100%;
+  display: flex;
+  color: var(--color-weekdays);
+}
+
+#weekdays div {
+  width: 100px;
+  padding: 10px;
+  border-style: solid;
+  background-color: #508dff;
+  color: rgb(225, 248, 255);
+  text-align: center; /* Centraliza o texto dentro das caixas dos dias da semana */
+  font-family: 'Lato', sans-serif; /* Aplica a fonte Lato aos dias da semana */
+  font-size: 14px;
+  border-radius: 15%;
+}
+
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 10px;
+  height: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: var(--color-day);
+  margin: 5px;
+  box-shadow: 0px 0px 3px var(--box-shadow);
+  border-radius: 15%;
+  text-align: center; /* Garante que o texto dentro da caixa do dia esteja centralizado */
+  font-family: 'Lato', sans-serif; /* Aplica a fonte Lato aos dias */
+  font-size: 20px; /* Ajuste conforme necessário */
+  color: white; /* Cor do texto */
+}
+
+.day:hover {
+  background-color: var(--hover);
+}
+
+.day + #currentDay {
+  background-color: var(--current-day);
+}
+
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: var(--event-color);
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+  text-align: center; /* Centraliza o texto dentro dos eventos */
+  font-family: 'Lato', sans-serif; /* Aplica a fonte Lato aos eventos */
+}
+
+.padding {
+  cursor: default !important;
+  background-color: var(--body-color) !important;
+  box-shadow: none !important;
+}
+
+#newEventModal, #deleteEventModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: var(--modal-event);
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: 'Lato', sans-serif; /* Aplica a fonte Lato aos modais */
+  text-align: center; /* Centraliza o texto dentro dos modais */
+}
+
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+  font-family: 'Lato', sans-serif; /* Aplica a fonte Lato ao input */
+}
+
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+
+#cancelButton, #deleteButton {
+  background-color: var(--header-color);
+}
+
+#saveButton, #closeButton {
+  background-color: var(--header-button);
+}
+
+#eventText {
+  font-size: 14px;
+  font-family: 'Lato', sans-serif; /* Aplica a fonte Lato ao texto do modal de exclusão */
+}
+
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+}
+
+#monthDisplay 
+{
+  color: #008cff;
+}
+
+.toggle 
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+}
+
